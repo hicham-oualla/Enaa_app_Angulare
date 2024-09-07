@@ -1,0 +1,73 @@
+.navbar {
+    display: flex;
+    width: 80%;
+    max-width: 1323px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    color: rgba(5, 98, 38, 1);
+    font: 637 20px 'Josefin Sans', sans-serif;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 5px 53px;
+    margin-left: 73px;
+  }
+  
+  @media (max-width: 991px) {
+    .navbar {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+  
+  .logo {
+    width: 150px;
+    aspect-ratio: 6.21;
+    object-fit: contain;
+    object-position: center;
+  }
+  
+  .nav-item {
+    margin: auto 0;
+  }
+  
+  .nav-item a {
+    text-decoration: none;
+    color: rgba(5, 98, 38, 1);
+    transition: color 0.3s, background-color 0.3s;
+    padding: 10px 15px;
+    display: inline-block;
+  }
+  
+  .nav-item a:hover, .nav-item a:focus {
+    color: rgba(41, 158, 23, 1);
+    background-color: rgba(5, 98, 38, 0.1);
+    border-radius: 5px;
+  }
+  
+  .nav-item a.active {
+    color: rgba(41, 158, 23, 1);
+    font-weight: bold;
+    background-color: rgba(5, 98, 38, 0.2);
+  }
+  
+  .login-button {
+    border-radius: 10px;
+    background-color: rgba(41, 158, 23, 1);
+    color: rgba(255, 255, 255, 1);
+    padding: 12px 22px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .login-button:hover, .login-button:focus {
+    background-color: rgba(35, 134, 19, 1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .login-button:active {
+    background-color: rgba(41, 158, 23, 0.8);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
