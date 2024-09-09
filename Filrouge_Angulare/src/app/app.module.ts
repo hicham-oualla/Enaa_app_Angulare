@@ -7,18 +7,28 @@ import { AppRoutingModule } from './app-routing.module';
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import { HomeComponent } from './home/home.component';
 import { ClasseComponent } from './classe/classe.component';
+import { ClasseFormComponent } from './classe-form/classe-form.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { ApprenantsComponent } from './apprenants/apprenants/apprenants.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    ClasseComponent
+    ClasseComponent,
+    ClasseFormComponent,
+    ApprenantsComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
+    ReactiveFormsModule,
+    FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+   
   ],
   providers: [HttpClient],
   bootstrap: [AppComponent]

@@ -1,5 +1,5 @@
-export class Classe {
-id?:number
-nom?:string
+export interface Classe {
+id:number
+nom:string
 
 }
