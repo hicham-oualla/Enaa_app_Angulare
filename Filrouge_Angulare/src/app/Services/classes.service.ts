@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Classe } from './Model/classe';  // Create a model for Classe
+import {Classe, Classedto} from './Model/classe';  // Create a model for Classe
 
 @Injectable({
   providedIn: 'root'
@@ -20,12 +20,12 @@ export class ClasseService {
     return this.http.get<Classe>(`${this.apiUrl}/getClasseById/${id}`);
   }
 
-  createClasse(classe: Classe): Observable<Classe> {
-    return this.http.post<Classe>(`${this.apiUrl}/Add`, classe);
+  createClasse(classe: Classedto): Observable<Classedto> {
+    return this.http.post<Classedto>(`${this.apiUrl}/Add`, classe);
   }
 
-  updateClasse(id: number, classe: Classe): Observable<Classe> {
-    return this.http.put<Classe>(`${this.apiUrl}/updateClasse/${id}`, classe);
+  updateClasse(id: number, classe: Classedto): Observable<Classedto> {
+    return this.http.put<Classedto>(`${this.apiUrl}/updateClasse/${id}`, classe);
   }
 
   deleteClasse(id: number): Observable<void> {

@@ -40,8 +40,8 @@ private getclasses(){
     })
   }
 
-  toApprenants(){
-    this.router.navigate(['apprenants']);
+  toApprenants(id:number){
+    this.router.navigate(['apprenants', id]);
   }
 
 }

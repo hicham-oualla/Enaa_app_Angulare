@@ -26,7 +26,7 @@
     </button>
     <div class="classes-container">
       <div class="classes-container">
-            <div (click)="toApprenants()" class="class-card" *ngFor="let classe of class">
+            <div (click)="toApprenants(classe.id)" class="class-card" *ngFor="let classe of class">
               <a>{{ classe.nom }}</a>
               <i class="fas fa-edit icon edit" (click)="editClass(classe.id)"></i>
               <i class="fas fa-trash icon delete" (click)="deleteClasse(classe.id)"></i>

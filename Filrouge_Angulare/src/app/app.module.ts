@@ -11,6 +11,7 @@ import { ClasseFormComponent } from './classe-form/classe-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ApprenantsComponent } from './apprenants/apprenants/apprenants.component';
+import { ApprenantsFormComponent } from './apprenants-form/apprenants-form.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ApprenantsComponent } from './apprenants/apprenants/apprenants.componen
     HomeComponent,
     ClasseComponent,
     ClasseFormComponent,
-    ApprenantsComponent
+    ApprenantsComponent,
+    ApprenantsFormComponent
   ],
   imports: [
     CommonModule,

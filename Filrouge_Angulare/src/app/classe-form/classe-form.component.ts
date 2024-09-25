@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ClasseService } from '../Services/classes.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Classe } from '../Services/Model/classe';
+import {Classe, Classedto} from '../Services/Model/classe';
 
 @Component({
   selector: 'app-classe-form',
@@ -39,7 +39,7 @@ export class ClasseFormComponent implements OnInit{
 
   onSubmit(): void{
     if(this.classForm.valid){
-      const classe : Classe = this.classForm.value
+      const classe : Classedto = this.classForm.value
         if(this.classeId){
           this.classeService.updateClasse(this.classeId, classe).subscribe(()=>{
             alert('Class updated seccssuful')

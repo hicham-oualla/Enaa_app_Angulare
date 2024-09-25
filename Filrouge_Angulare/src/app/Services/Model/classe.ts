@@ -3,3 +3,7 @@ id:number
 nom:string
 
 }
+
+export interface Classedto{
+  nom:String
+}

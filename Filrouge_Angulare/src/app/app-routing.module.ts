@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { ClasseComponent } from './classe/classe.component';
 import { ClasseFormComponent } from './classe-form/classe-form.component';
 import { ApprenantsComponent } from './apprenants/apprenants/apprenants.component';
+import {ApprenantsFormComponent} from "./apprenants-form/apprenants-form.component";
 
 
 const routes: Routes = [
@@ -20,12 +21,15 @@ const routes: Routes = [
   },
   {
     path: 'edit/:id',component: ClasseFormComponent,
-  }, 
+  },
   {
-    path: 'apprenants',component: ApprenantsComponent,
+    path: 'apprenants/:id',component: ApprenantsComponent,
+  },
+  {
+    path: 'addapprenants/:id',component: ApprenantsFormComponent,
   }
 
-  
+
 
 ];
 @NgModule({
