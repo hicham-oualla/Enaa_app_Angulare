@@ -1,0 +1,29 @@
+<div class="main-content">
+  <h2 class="heading">
+    Vous pouvez suivre le retard et l'absence de l'apprenant Hisham oualla
+  </h2>
+  <div class="cards">
+    <!-- Card for absence, wrapped in anchor to make it clickable -->
+    <a routerLink="/absence" class="card-link">
+      <div class="card">
+        <img src="assets/image/disqualified_8437741.png" alt="Absence Icon" />
+        <p>absent</p>
+      </div>
+    </a>
+    <!-- Card for retard, wrapped in anchor to make it clickable -->
+    <a (click)="toRetartd(id)" class="card-link">
+      <div class="card">
+        <img src="assets/image/sand-clock_8449752.png" alt="Retard Icon" />
+        <p>retard</p>
+      </div>
+    </a>
+  </div>
+
+  <!-- Image under the cards -->
+  <div class="img-container">
+    <img
+      src="assets/image/vecteezy_flat-isometric-illustration-concept-idea-lamp-slide-from_6202069.jpg"
+      alt="Illustration"
+    />
+  </div>
+</div>
