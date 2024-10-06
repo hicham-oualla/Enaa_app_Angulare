@@ -1,0 +1,24 @@
+<div class="container">
+  <h2>Formulaire de Retard</h2>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="date">Date:</label>
+      <input type="date" class="form-control" id="date" [(ngModel)]="retard.date" name="date" required>
+    </div>
+
+    <div class="form-group">
+      <label for="durationDeRetard">Durée du retard (en minutes):</label>
+      <input type="number" class="form-control" id="durationDeRetard" [(ngModel)]="retard.durationDeRetard" name="durationDeRetard" required>
+    </div>
+
+<!--    <div class="form-group">-->
+<!--&lt;!&ndash;      <label for="etat_retard">État du retard:</label>&ndash;&gt;-->
+<!--&lt;!&ndash;      <select class="form-control" id="etat_retard" [(ngModel)]="retard.etat_retard" name="etat_retard" required>&ndash;&gt;-->
+<!--&lt;!&ndash;        <option value="JUSTIFIE">Justifié</option>&ndash;&gt;-->
+<!--&lt;!&ndash;        <option value="NON_JUSTIFIE">Non justifié</option>&ndash;&gt;-->
+<!--      </select>-->
+<!--    </div>-->
+
+    <button type="submit" class="btn btn-primary">Enregistrer le retard</button>
+  </form>
+</div>
