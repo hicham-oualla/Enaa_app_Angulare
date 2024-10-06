@@ -1,0 +1,46 @@
+
+
+<div class="main-content">
+
+
+  <div class="absence-container">
+    <h2>Liste des Absences de l'Apprenant</h2>
+
+    <button (click)="onAddAbsence()" class="btn btn-add">Ajouter une Absence</button>
+
+    <table class="absence-table">
+      <thead>
+      <tr>
+        <th>Date de début</th>
+        <th>Date de fin</th>
+        <th>Durée (jours)</th>
+        <th>État</th>
+        <th>Justifications</th>
+        <th>Actions</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let absence of absences">
+        <td>{{ absence.datedebut | date: 'dd/MM/yyyy' }}</td>
+        <td>{{ absence.datedefin | date: 'dd/MM/yyyy' }}</td>
+        <td>{{ absence.duration }}</td>
+        <td>
+            <span [ngClass]="{'justifie': absence.etat_absence === 'JUSTIFIE', 'non-justifie': absence.etat_absence === 'NON_JUSTIFIE'}">
+              <i [ngClass]="absence.etat_absence === 'JUSTIFIE' ? 'fas fa-check-circle' : 'fas fa-times-circle'"></i>
+              {{ absence.etat_absence === 'JUSTIFIE' ? 'Justifiée' : 'Non Justifiée' }}
+            </span>
+        </td>
+        <td>
+          <ul>
+
+          </ul>
+        </td>
+        <td>
+          <button (click)="onEditAbsence(absence.id)" class="btn btn-edit">Modifier</button>
+          <button (click)="onDeleteAbsence(absence.id)" class="btn btn-delete">Supprimer</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
