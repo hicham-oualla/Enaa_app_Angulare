@@ -1,0 +1,105 @@
+<div >
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #sidenav mode="side" opened class="sidenav" [fixedInViewport]="true">
+      <div class="logo">
+        <h2>Menu</h2>
+      </div>
+      <mat-nav-list>
+        <div class="menu-item-card">
+          <a mat-list-item routerLink="/home" class="menu-item">
+            <mat-icon>home</mat-icon>
+            <span>Home</span>
+          </a>
+        </div>
+        <div class="menu-item-card">
+          <a mat-list-item routerLink="/dashbord" class="menu-item">
+            <mat-icon>class</mat-icon>
+            <span>Dashboard</span>
+          </a>
+        </div>
+        <div class="menu-item-card">
+          <a mat-list-item routerLink="/apprenants" class="menu-item">
+            <mat-icon>people</mat-icon>
+            <span>Apprenants</span>
+          </a>
+        </div>
+        <div class="menu-item-card">
+          <a mat-list-item routerLink="/classes" class="menu-item">
+            <mat-icon>class</mat-icon>
+            <span>Classes</span>
+          </a>
+        </div>
+        <div class="menu-item-card">
+          <a mat-list-item (click)="lougout()" class="menu-item">
+            <mat-icon>logout</mat-icon>
+            <span>Log out</span>
+          </a>
+        </div>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <button mat-icon-button (click)="sidenav.toggle()" class="menu-button">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <div class="main-content">
+        <!-- Your main content here -->
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
+
+<div *ngIf="userRole === 'apprenant'">
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #sidenav mode="side" opened class="sidenav" [fixedInViewport]="true">
+      <div class="logo">
+        <h2>Menu</h2>
+      </div>
+      <mat-nav-list>
+        <div class="menu-item-card">
+          <a mat-list-item routerLink="/home" class="menu-item">
+            <mat-icon>home</mat-icon>
+            <span>Home</span>
+          </a>
+        </div>
+        <div class="menu-item-card">
+          <a mat-list-item routerLink="/espace-app" class="menu-item">
+            <mat-icon>people</mat-icon>
+            <span>Dashboard</span>
+          </a>
+        </div>
+        <div class="menu-item-card">
+          <a mat-list-item routerLink="/retard-app" class="menu-item">
+            <mat-icon>class</mat-icon>
+            <span>Retard</span>
+          </a>
+        </div>
+        <div class="menu-item-card">
+          <a mat-list-item routerLink="/absAPP" class="menu-item">
+            <mat-icon>class</mat-icon>
+            <span>Absence</span>
+          </a>
+        </div>
+        <div class="menu-item-card">
+          <a mat-list-item (click)="lougout()" class="menu-item">
+            <mat-icon>logout</mat-icon>
+            <span>Log out</span>
+          </a>
+        </div>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <button mat-icon-button (click)="sidenav.toggle()" class="menu-button">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <div class="main-content">
+        <!-- Your main content here -->
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+
+
+</div>
+
+
+
