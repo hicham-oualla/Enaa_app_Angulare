@@ -1,0 +1,54 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+  background-image: url('/assets/image/pxfuel (2).jpg'); /* Remplacez par le chemin de votre image */
+  background-size: cover; /* Couvre toute la page */
+  background-position: center; /* Centre l'image */
+  color: #333; /* Couleur du texte par défaut */
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  PADDING-TOP: 65PX;
+}
+.section {
+  position: relative;
+  background-color: white;
+  border: 3px solid #28a745; /* Bordure verte pour le cadre */
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre portée */
+  padding: 20px;
+}
+.section::before {
+  content: '';
+  position: absolute;
+  top: -20px; /* Positionnement du triangle */
+  left: 20px;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid #28a745; /* Couleur du triangle */
+}
+.section h2 {
+  color: #28a745; /* Couleur verte pour les titres */
+}
+.section p {
+  margin-bottom: 10px;
+}
+.info-box {
+  border: 1px solid #28a745; /* Bordure verte */
+  background-color: rgba(40, 167, 69, 0.1); /* Fond vert clair */
+  color: #28a745; /* Couleur du texte verte */
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.info-box .icon {
+  font-size: 24px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
