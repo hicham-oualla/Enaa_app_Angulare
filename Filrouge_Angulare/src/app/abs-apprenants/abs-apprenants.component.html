@@ -1,0 +1,35 @@
+<div class="absence-container" style="background-image: url('/assets/image/beautiful-spring-time-change-concept.jpg'); background-size: cover; padding: 20px;">
+  <h2>Liste des Absences de l'Apprenant "{{ nom }}"</h2>
+
+  <table class="absence-table">
+    <thead>
+    <tr>
+      <th>Date de début</th>
+      <th>Date de fin</th>
+      <th>Durée (jours)</th>
+      <th>État</th>
+
+      <th>Importer Justification</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let absence of absences">
+      <td>{{ absence.datedebut | date: 'dd/MM/yyyy' }}</td>
+      <td>{{ absence.datedefin | date: 'dd/MM/yyyy' }}</td>
+      <td>{{ absence.duration }}</td>
+      <td>
+          <span [ngClass]="{'justifie': absence.etat_absence === 'JUSTIFIE', 'non-justifie': absence.etat_absence === 'NON_JUSTIFIE'}">
+            <i [ngClass]="absence.etat_absence === 'JUSTIFIE' ? 'fas fa-check-circle' : 'fas fa-times-circle'"></i>
+            {{ absence.etat_absence === 'JUSTIFIE' ? 'Justifiée' : 'Non Justifiée' }}
+          </span>
+      </td>
+
+      <td>
+        <!-- Apprenant can select a PDF file and upload -->
+        <input type="file" (change)="onFileSelected($event)" class="btn btn-import" accept="application/pdf">
+        <button (click)="onImportJustification(absence.id)" class="btn btn-upload">Importer PDF</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

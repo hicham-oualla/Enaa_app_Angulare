@@ -1,0 +1,65 @@
+.absence-container {
+  background-color: rgba(255, 255, 255, 0.9); /* semi-transparent white for readability */
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+table.absence-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table.absence-table th, table.absence-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+table.absence-table th {
+  background-color: #f2f2f2;
+}
+
+table.absence-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+table.absence-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+table.absence-table th, td {
+  text-align: left;
+}
+
+table.absence-table img {
+  width: 20px;
+  height: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .absence-container {
+    padding: 10px;
+  }
+
+  .btn {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  table.absence-table th, table.absence-table td {
+    padding: 6px;
+  }
+}
