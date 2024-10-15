@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import {Retard} from "../Model/reatrd";
+import {Retard} from "../Model/retard/reatrd";
  // Adjust the path according to your structure
 
 @Injectable({
@@ -38,12 +38,12 @@ export class RetardService {
   }
 
   // Count Retards by Apprenant
-  countRetardsByApprenant(apprenantId: number): Observable<number> {
+  countRetardsByApprenant(apprenantId: number | null): Observable<number> {
     return this.http.get<number>(`${this.apiUrl}/countRetardsByApprenant/${apprenantId}`);
   }
 
   // Get Retards by Apprenant ID
-  getRetardsByApprenant(apprenantId: number): Observable<Retard[]> {
+  getRetardsByApprenant(apprenantId: number|null): Observable<Retard[]> {
     return this.http.get<Retard[]>(`${this.apiUrl}/getRetardsByApprenant/${apprenantId}`);
   }
 }

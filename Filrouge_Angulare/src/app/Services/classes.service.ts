@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import {Classe, Classedto} from './Model/classe';  // Create a model for Classe
+import {Classe, Classedto} from '../Model/classe/classe';  // Create a model for Classe
 
 @Injectable({
   providedIn: 'root'

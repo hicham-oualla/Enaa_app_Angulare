@@ -33,11 +33,11 @@ export class AbsenceService {
     return this.http.delete<void>(`${this.apiUrl}/delete/${id}`);
   }
 
-  countAbsencesByApprenant(apprenantId: number): Observable<number> {
+  countAbsencesByApprenant(apprenantId: number | null): Observable<number> {
     return this.http.get<number>(`${this.apiUrl}/countABS/apprenant/${apprenantId}`);
   }
 
-  getAbsencesByApprenant(apprenantId: number): Observable<Absence[]> {
+  getAbsencesByApprenant(apprenantId?: number| null): Observable<Absence[]> {
     return this.http.get<Absence[]>(`${this.apiUrl}/GetAbsenceBYapprenant/${apprenantId}`);
   }
 }

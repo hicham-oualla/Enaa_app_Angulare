@@ -44,9 +44,9 @@ body {
 /* Adjusted card width to 198px */
 .card {
   background-color: #83c297;
-  color: white;
+  color: #cd2e2e;
   padding: 40px 20px;
-  box-shadow: -12px -7px 0px rgba(5, 98, 38, 1);
+
   width: 198px; /* Set card width */
   height: 160px; /* Fixed height */
   text-align: center;

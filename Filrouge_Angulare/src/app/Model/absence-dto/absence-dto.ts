@@ -5,4 +5,5 @@ export interface AbsenceDTO {
   duration: number;
   apprenantId: number;
   etat_absence: string;
+
 }

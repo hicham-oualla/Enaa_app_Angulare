@@ -1,0 +1,21 @@
+<div class="add-absence-container">
+  <h2>Ajouter une Absence</h2>
+  <form [formGroup]="absenceForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="datedebut">Date de début:</label>
+      <input type="date" id="datedebut" formControlName="datedebut" required>
+    </div>
+    <div class="form-group">
+      <label for="datedefin">Date de fin:</label>
+      <input type="date" id="datedefin" formControlName="datedefin" required>
+    </div>
+<!--    <div class="form-group">-->
+<!--      <label for="etat_absence">État de l'absence:</label>-->
+<!--      <select id="etat_absence" formControlName="etat_absence" required>-->
+<!--        <option value="NON_JUSTIFIE">Non Justifiée</option>-->
+<!--        <option value="JUSTIFIE">Justifiée</option>-->
+<!--      </select>-->
+<!--    </div>-->
+    <button type="submit" [disabled]="!absenceForm.valid">Ajouter l'absence</button>
+  </form>
+</div>

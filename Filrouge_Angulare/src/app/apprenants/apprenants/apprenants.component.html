@@ -1,39 +1,57 @@
-<div class="container mt-5">
-    <h2>Liste des Apprenants</h2>
-    <a (click)="toAddAprennat()" class="btn btn-primary mb-3">
-        <i class="bi bi-plus-circle"><a >Apprenants</a></i>
-    </a>
-    <table class="table table-bordered table-striped custom-table">
+<div class="layout-container">
+  <app-sidebar class="sidebar"></app-sidebar>
+
+  <div class="main-content">
+    <div class="container mt-5">
+      <h2>Liste des Apprenants de classe "{{classename}}"</h2>
+
+      <!-- Search input -->
+      <div class="mb-3">
+        <input
+          type="text"
+          [(ngModel)]="searchTerm"
+          class="form-control search-input"
+          placeholder="Rechercher par nom ou Id National"
+          (input)="searchApprenant()">
+      </div>
+
+      <a (click)="toAddApprenant()" class="btn btn-primary mb-3">
+        <i class="bi bi-plus-circle"></i> Apprenants
+      </a>
+
+      <table class="table table-bordered table-striped custom-table">
         <thead>
-            <tr>
-                <th>Nom</th>
-                <th>Email</th>
-                <th>Address</th>
-                <th>Phone</th>
-                <th>Id National</th>
-                <th>Actions</th>
-            </tr>
+        <tr>
+          <th>Nom</th>
+          <th>Email</th>
+          <th>Address</th>
+          <th>Phone</th>
+          <th>Id National</th>
+          <th>Actions</th>
+        </tr>
         </thead>
         <tbody>
-
-            <tr *ngFor="let apprenant of classeApprenants">
-                <td>{{ apprenant.nom }}</td>
-                <td>{{ apprenant.email }}</td>
-                <td>{{ apprenant.address }}</td>
-                <td>{{ apprenant .phone}}</td>
-                <td>{{ apprenant.idNational }}</td>
-                <td>
-                    <a href="#" class="btn btn-warning btn-custom">
-                        <i class="bi bi-pencil"></i>
-                    </a>
-                    <a (click)="deleteApprenant(apprenant.id)" class="btn btn-danger btn-custom">
-                        <i class="bi bi-trash"></i>
-                    </a>
-                  <a  class="btn btn-info btn-custom">
-                    <i class="bi bi-eye"></i>
-                  </a>
-                </td>
-            </tr>
+        <!-- Filtered apprenants displayed here -->
+        <tr *ngFor="let apprenant of filteredApprenants">
+          <td>{{ apprenant.nom }}</td>
+          <td>{{ apprenant.email }}</td>
+          <td>{{ apprenant.address }}</td>
+          <td>{{ apprenant.phone }}</td>
+          <td>{{ apprenant.idNational }}</td>
+          <td>
+            <a (click)="editApprenant(apprenant.id)" class="btn btn-warning btn-custom">
+              <i class="bi bi-pencil"></i>
+            </a>
+            <a (click)="deleteApprenant(apprenant.id)" class="btn btn-danger btn-custom">
+              <i class="bi bi-trash"></i>
+            </a>
+            <a [routerLink]="['/suivi', apprenant.id]" class="btn btn-info btn-custom">
+              <i class="bi bi-eye"></i>
+            </a>
+          </td>
+        </tr>
         </tbody>
-    </table>
+      </table>
+    </div>
+  </div>
 </div>

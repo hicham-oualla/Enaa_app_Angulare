@@ -1,0 +1,21 @@
+<!--<p>classe-form works!</p>-->
+
+<!--<h1>{{classeId ? 'update classe' : 'Add new classe'}}</h1>-->
+<!--<form [formGroup]="classForm" (ngSubmit)="onSubmit()">-->
+<!--    <label for="">Class nom</label>-->
+<!--    <input type="text" formControlName="nom">-->
+<!--    <button [disabled]="classForm.invalid">{{classeId? 'update': 'add'}}</button>-->
+<!--</form>-->
+<div class="form-container">
+  <h2>{{ classeId ? 'Modifier une Classe' : 'Ajouter une Classe' }}</h2>
+  <form [formGroup]="classForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="class-name">Nom de la Classe:</label>
+      <input id="class-name" type="text" formControlName="nom" placeholder="Nom de la classe">
+    </div>
+
+    <button [disabled]="classForm.invalid" class="submit-button">
+      {{ classeId ? 'Mettre à jour' : 'Ajouter' }}
+    </button>
+  </form>
+</div>

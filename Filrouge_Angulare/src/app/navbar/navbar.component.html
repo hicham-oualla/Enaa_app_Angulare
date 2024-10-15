@@ -1,9 +1,22 @@
+
+<div >
 <header class="navbar">
     <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9a7861cae53a2a00e0f01ba36ceab71831157e9ce2f43a600e9641f4257ab5c4?apiKey=c8e22ba112124633bbd3b2ea7a2b3814&&apiKey=c8e22ba112124633bbd3b2ea7a2b3814" alt="Logo" class="logo" />
-    <nav class="nav-item"><a href="#home">Home</a></nav>
-    <nav class="nav-item large"><a href="/classes">Apprenants</a></nav>
-    <nav class="nav-item small"><a href="#nos-lois">Nos lois</a></nav>
-    <nav class="nav-item medium"><a href="/logine.html">Contact us</a></nav>
-    <button class="login-button">Se connecter</button>
+    <nav class="nav-item"><a href="">Home</a></nav>
+    <nav class="nav-item large"><a href="espace-app">votre espace</a></nav>
+    <nav class="nav-item small"><a href="nos_lois">Nos lois</a></nav>
+    <nav class="nav-item medium"><a href="guid">Guid</a></nav>
+    <button class="login-button" routerLink="login">Se connecter</button>
   </header>
-  
+</div>
+
+<div *ngIf="userRole === 'admin'">
+  <header class="navbar">
+    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9a7861cae53a2a00e0f01ba36ceab71831157e9ce2f43a600e9641f4257ab5c4?apiKey=c8e22ba112124633bbd3b2ea7a2b3814&&apiKey=c8e22ba112124633bbd3b2ea7a2b3814" alt="Logo" class="logo" />
+    <nav class="nav-item"><a href="#home">Home</a></nav>
+    <nav class="nav-item large"><a href="/classes">app espace</a></nav>
+    <nav class="nav-item small"><a href="nos_lois">Nos lois</a></nav>
+    <nav class="nav-item medium"><a href="/logine.html">Contact us</a></nav>
+    <button class="login-button" routerLink="login">Se connecter</button>
+  </header>
+</div>

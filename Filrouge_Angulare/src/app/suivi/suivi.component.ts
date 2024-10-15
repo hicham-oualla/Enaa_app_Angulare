@@ -2,7 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 import {ApprenantService} from "../Services/apprenant.service";
 import {RetardService} from "../Services/retard.service";
-import {Retard} from "../Model/reatrd";
+import {Retard} from "../Model/retard/reatrd";
+import {AbsenceService} from "../Services/absence.service";
 
 @Component({
   selector: 'app-suivi',
@@ -14,10 +15,12 @@ export class SuiviComponent implements OnInit{
   id!:number;
   nom!:string;
   nbrRetard!:number;
+  nbrAbsence!:number;
 
   constructor(private route: ActivatedRoute,
               private service:ApprenantService,
               private servicer : RetardService,
+              private absenceService : AbsenceService,
               private router:Router) {
   }
 
@@ -29,9 +32,16 @@ export class SuiviComponent implements OnInit{
       }
 
     )
+
     this.servicer.countRetardsByApprenant(this.id).subscribe(
       data=>{
         this.nbrRetard = data
+      }
+
+    )
+    this.absenceService.countAbsencesByApprenant(this.id).subscribe(
+      data=>{
+        this.nbrAbsence = data
       }
     )
   }

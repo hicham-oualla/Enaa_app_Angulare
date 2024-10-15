@@ -1,0 +1,48 @@
+<div class="dashboard-container">
+  <mat-grid-list cols="2" rowHeight="350px">
+    <mat-grid-tile>
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-icon mat-card-avatar>dashboard</mat-icon>
+          <mat-card-title>Total Statistics</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="stat-item">
+            <mat-icon color="primary">school</mat-icon>
+            <span>Total Classes: 2</span>
+          </div>
+          <div class="stat-item">
+            <mat-icon color="accent">people</mat-icon>
+            <span>Total Students: 60</span>
+          </div>
+          <div class="stat-item">
+            <mat-icon color="warn">grade</mat-icon>
+            <span>Total Levels: 11</span>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-icon mat-card-avatar>bar_chart</mat-icon>
+          <mat-card-title>Students per Class</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <canvas id="classChart"></canvas>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-icon mat-card-avatar>pie_chart</mat-icon>
+          <mat-card-title>Students per Level</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <canvas id="levelChart"></canvas>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

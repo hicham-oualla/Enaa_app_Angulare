@@ -1,8 +1,0 @@
-<p>classe-form works!</p>
-
-<h1>{{classeId ? 'update classe' : 'Add new classe'}}</h1>
-<form [formGroup]="classForm" (ngSubmit)="onSubmit()">
-    <label for="">Class nom</label>
-    <input type="text" formControlName="nom">
-    <button [disabled]="classForm.invalid">{{classeId? 'update': 'add'}}</button>
-</form>

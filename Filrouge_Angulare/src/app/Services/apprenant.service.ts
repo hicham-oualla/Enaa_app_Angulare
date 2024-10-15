@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import {ApprenantDTO, Apprenants} from './Model/apprenants'; // Adjust the path as necessary
+import {ApprenantDTO, Apprenants} from '../Model/apprenants/apprenants';
+import {AuthenticationResponse} from "../Model/authentication-response"; // Adjust the path as necessary
 
 @Injectable({
   providedIn: 'root'
@@ -12,12 +13,12 @@ export class ApprenantService {
   constructor(private http: HttpClient) { }
 
   // Create a new Apprenant
-  createApprenant(Apprenants: ApprenantDTO): Observable<ApprenantDTO> {
-    return this.http.post<ApprenantDTO>(`${this.apiUrl}/ADD`, Apprenants);
+  registerApprenant(apprenant: ApprenantDTO): Observable<AuthenticationResponse> {
+    return this.http.post<AuthenticationResponse>(`${this.apiUrl}/Add`, apprenant);
   }
 
   // Get an Apprenant by ID
-  getApprenantById(id: number): Observable<ApprenantDTO> {
+  getApprenantById(id: number| null): Observable<ApprenantDTO> {
     return this.http.get<ApprenantDTO>(`${this.apiUrl}/getApprenants/${id}`);
   }
 

@@ -1,0 +1,20 @@
+<main>
+  <div class="container">
+    <h2>Formulaire de Retard</h2>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="date">Date:</label>
+        <input type="date" class="form-control" id="date" [(ngModel)]="retard.date" name="date" required>
+      </div>
+
+      <div class="form-group">
+        <label for="durationDeRetard">Durée du retard (en minutes):</label>
+        <input type="number" class="form-control" id="durationDeRetard" [(ngModel)]="retard.durationDeRetard" name="durationDeRetard" required>
+      </div>
+
+
+      <button type="submit" class="btn btn-primary">Enregistrer le retard</button>
+    </form>
+  </div>
+
+</main>
