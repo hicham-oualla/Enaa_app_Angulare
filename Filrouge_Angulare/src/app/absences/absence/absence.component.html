@@ -20,9 +20,9 @@
       <td>{{ absence.datedefin | date: 'dd/MM/yyyy' }}</td>
       <td>{{ absence.duration }}</td>
       <td>
-          <span [ngClass]="{'justifie': absence.etat_absence === 'JUSTIFIE', 'non-justifie': absence.etat_absence === 'NON_JUSTIFIE'}">
-            <i [ngClass]="absence.etat_absence === 'JUSTIFIE' ? 'fas fa-check-circle' : 'fas fa-times-circle'"></i>
-            {{ absence.etat_absence === 'JUSTIFIE' ? 'Justifiée' : 'Non Justifiée' }}
+          <span [ngClass]="{'justifie': absence.etat_absence === 'JUSTIFIER', 'non-justifie': absence.etat_absence === 'NONJUSTIFIER'}">
+            <i [ngClass]="absence.etat_absence === 'JUSTIFIER' ? 'fas fa-check-circle' : 'fas fa-times-circle'"></i>
+            {{ absence.etat_absence === 'JUSTIFIER' ? 'Justifiée' : 'Non Justifiée' }}
           </span>
       </td>
       <td>
@@ -34,7 +34,7 @@
       </td>
       <td>
         <button (click)="downloadJustificationPdf(absence.id)" class="btn btn-download">Télécharger Justification</button>
-        <button class="btn btn-edit">Modifier</button>
+        <button  (click)="onEditeAbsence(absence.id)" class="btn btn-edit">Modifier</button>
         <button (click)="onDeleteAbsence(absence.id)" class="btn btn-delete">Supprimer</button>
       </td>
     </tr>

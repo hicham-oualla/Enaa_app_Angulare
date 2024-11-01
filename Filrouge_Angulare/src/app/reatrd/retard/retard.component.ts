@@ -81,7 +81,7 @@ export class RetardComponent implements OnInit {
   }
 
   onEditRetard(id: number) {
-   this.router.navigate(["/updateRetard"])
+   this.router.navigate(["/updateRetard",id])
   }
 
   onAddRetard() {

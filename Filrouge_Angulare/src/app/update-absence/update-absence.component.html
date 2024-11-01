@@ -1,0 +1,57 @@
+<div class="container">
+  <h2>Update Absence</h2>
+  <form (ngSubmit)="updateAbsence()">
+    <div class="form-group">
+      <label for="datedebut">Start Date</label>
+      <input
+        type="date"
+        id="datedebut"
+        [(ngModel)]="absenceDTO.datedebut"
+        name="datedebut"
+        class="form-control"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="datedefin">End Date</label>
+      <input
+        type="date"
+        id="datedefin"
+        [(ngModel)]="absenceDTO.datedefin"
+        name="datedefin"
+        class="form-control"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="duration">Duration</label>
+      <input
+        type="number"
+        id="duration"
+        [(ngModel)]="absenceDTO.duration"
+        name="duration"
+        class="form-control"
+        required
+      />
+    </div>
+
+
+
+    <div class="form-group">
+      <label for="etat_absence">Absence State</label>
+      <select
+        id="etat_absence"
+        [(ngModel)]="absenceDTO.etat_absence"
+        name="etat_absence"
+        class="form-control"
+      >
+        <option value="NONJUSTIFIER">Non Justified</option>
+        <option value="JUSTIFIER">Justified</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Update Absence</button>
+  </form>
+</div>

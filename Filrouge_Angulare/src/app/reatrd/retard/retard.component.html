@@ -1,6 +1,3 @@
-
-
-
 <div class="retard-container">
   <h2>Liste des Retards de l'Apprenant "{{nom}}"</h2>
 
@@ -21,16 +18,15 @@
       <td>{{ retard.date | date: 'dd/MM/yyyy' }}</td>
       <td>{{ retard.durationDeRetard }}</td>
       <td>
-        <span [ngClass]="{'justifie': retard.etat_retard === 'JUSTIFIE', 'non-justifie': retard.etat_retard === 'NON_JUSTIFIE'}">
-          <i [ngClass]="retard.etat_retard === 'JUSTIFIE' ? 'fas fa-check-circle' : 'fas fa-times-circle'"></i>
-          {{ retard.etat_retard === 'JUSTIFIE' ? 'Justifié' : 'Non Justifié' }}
-        </span>
+          <span [ngClass]="{'justifie': retard.etat_retard === 'JUSITIFIER', 'non-justifie': retard.etat_retard === 'NONJUSITIFIER'}">
+            <i [ngClass]="retard.etat_retard === 'JUSITIFIER' ? 'fas fa-check-circle' : 'fas fa-times-circle'"></i>
+            {{ retard.etat_retard === 'JUSITIFIER' ? 'Justifié' : 'Non Justifié' }}
+          </span>
       </td>
       <td>
         <ul>
-          <li   >
-          <button (click)="downloadJustificationPdf(retard.id)" class="btn btn-download">Télécharger Justification</button> <!-- Download button -->
-
+          <li>
+            <button (click)="downloadJustificationPdf(retard.id)" class="btn btn-download">Télécharger Justification</button>
           </li>
         </ul>
       </td>
@@ -45,4 +41,3 @@
   <app-retard-form *ngIf="add"></app-retard-form>
 
 </div>
-

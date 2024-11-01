@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import {Retard} from "../Model/retard/reatrd";
+import {Retard,RetardUpdate} from "../Model/retard/reatrd";
+
  // Adjust the path according to your structure
 
 @Injectable({
@@ -28,8 +29,12 @@ export class RetardService {
   }
 
   // Update a Retard
-  updateRetard(id: number, retard: Retard): Observable<Retard> {
-    return this.http.put<Retard>(`${this.apiUrl}/updateRetard/${id}`, retard);
+  updateRetard(id: number, retard: RetardUpdate): Observable<RetardUpdate> {
+    const data = {
+      ...retard,
+      apprenant: undefined
+    }
+    return this.http.put<RetardUpdate>(`${this.apiUrl}/updateRetard/${id}`, data);
   }
 
   // Delete a Retard

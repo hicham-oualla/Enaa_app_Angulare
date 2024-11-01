@@ -51,6 +51,9 @@ export class AbsenceComponent implements OnInit {
       );
     }
   }
+  onEditeAbsence(id:number){
+    this.router.navigate(["/updateabsence",id])
+  }
 
   getAbsenceList() {
     this.service.getAbsencesByApprenant(this.id).subscribe(

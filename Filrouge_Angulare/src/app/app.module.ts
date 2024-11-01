@@ -37,7 +37,8 @@ import { UpdateRetardComponent } from './update-retard/update-retard.component';
 import { NosLoisComponent } from './nos-lois/nos-lois.component';
 import { GuideUtilisateurComponentComponent } from './guide-utilisateur-component/guide-utilisateur-component.component';
 import { UdpateApprenantsComponent } from './udpate-apprenants/udpate-apprenants.component';
-import { TsetComponent } from './tset/tset.component';
+import { UpdateAbsenceComponent } from './update-absence/update-absence.component';
+
 ;
 
 
@@ -70,7 +71,8 @@ import { TsetComponent } from './tset/tset.component';
     NosLoisComponent,
     GuideUtilisateurComponentComponent,
     UdpateApprenantsComponent,
-    TsetComponent
+    UpdateAbsenceComponent,
+
 
   ],
   imports: [

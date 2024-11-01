@@ -20,6 +20,7 @@ import {AbsApprenantsComponent} from "./abs-apprenants/abs-apprenants.component"
 import {UpdateRetardComponent} from "./update-retard/update-retard.component";
 import {NosLoisComponent} from "./nos-lois/nos-lois.component";
 import {GuideUtilisateurComponentComponent} from "./guide-utilisateur-component/guide-utilisateur-component.component";
+import {UpdateAbsenceComponent} from "./update-absence/update-absence.component";
 
 
 const routes: Routes = [
@@ -75,7 +76,8 @@ const routes: Routes = [
   { path: 'add_absence/:id', component: AddAbsenceComponent },
   { path: 'dashbord', component: DashboardComponent },
   { path: 'absAPP', component: AbsApprenantsComponent },
-  { path: 'updateRetard', component: UpdateRetardComponent },
+  { path: 'updateRetard/:id', component: UpdateRetardComponent },
+  {path:'updateabsence/:id',component:UpdateAbsenceComponent},
 
 
 

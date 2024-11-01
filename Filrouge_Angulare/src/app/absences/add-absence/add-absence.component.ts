@@ -47,12 +47,13 @@ export class AddAbsenceComponent implements OnInit {
 
       };
 
+
       this.absenceService.saveAbsence(absenceDTO).subscribe(
         response => {
           console.log('Absence ajoutée avec succès', response);
           this.router.navigate(['absence', this.apprenantId]);
           window.location.reload()
-
+console.log(this.absenceForm)
         },
         error => {
           console.error('Erreur lors de l\'ajout de l\'absence', error);
